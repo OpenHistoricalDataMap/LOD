@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * Created by ggrauberger on 07.11.17.
  */
-public interface IGeoObjectRepository extends CrudRepository<GeoObject, String> {
-    GeoObject findByName(String name);
+public interface IGeoObjectRepository extends CrudRepository<GeoObject, Long> {
+    GeoObject findById(Long id);
 }

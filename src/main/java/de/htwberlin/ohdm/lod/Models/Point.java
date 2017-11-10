@@ -1,34 +1,31 @@
 package de.htwberlin.ohdm.lod.Models;
 
+import com.vividsolutions.jts.geom.Geometry;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Created by ggrauberger on 07.11.17.
+ * Created by ggrauberger on 09.11.17.
  */
 @Entity
-@Table(name = "geoobject")
-public class GeoObject {
+@Table(name = "points")
+public class Point {
     @Id
     private Long id;
-    private String name;
+    private Geometry point;
     private Long source_user_id;
 
-    public GeoObject() {
+    public Point() {
     }
 
-    @Override
-    public String toString() {
-        return String.format("GeoObject:[id:%d, name:%s]", id, name);
+    public Geometry getPoint() {
+        return point;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public Long getSource_user_id() {

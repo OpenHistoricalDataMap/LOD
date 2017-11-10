@@ -16,13 +16,13 @@ public class GeoObjectRestService {
     @Autowired private IGeoObjectRepository repository;
     static final Logger logger = LogManager.getLogger(GeoObjectRestService.class.getName());
 
-    @RequestMapping(value = "/geoobject/{name}",
+    @RequestMapping(value = "/geoobject/{id}",
             method = RequestMethod.GET)
     @ResponseBody
-    public String readGeoObject(@PathVariable String name){
+    public String readGeoObject(@PathVariable Long id){
         GeoObject geoObject;
         try {
-            geoObject = repository.findByName(name);
+            geoObject = repository.findById(id);
         } catch (Exception e) {
             logger.error(e.getMessage());
             return e.getMessage();
