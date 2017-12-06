@@ -1,6 +1,6 @@
-package de.htwberlin.ohdm.lod.Repositories;
+package de.htwberlin.ohdm.lod.repository;
 
-import de.htwberlin.ohdm.lod.Models.Point;
+import de.htwberlin.ohdm.lod.model.Point;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -8,5 +8,5 @@ import org.springframework.data.repository.CrudRepository;
  */
 
 public interface IPointRepository extends CrudRepository<Point, Long> {
-    public Point getById(Long id);
+    Point getById(Long id);
 }

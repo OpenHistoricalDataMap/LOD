@@ -1,6 +1,6 @@
-package de.htwberlin.ohdm.lod.Repositories;
+package de.htwberlin.ohdm.lod.repository;
 
-import de.htwberlin.ohdm.lod.Models.Line;
+import de.htwberlin.ohdm.lod.model.Line;
 import org.springframework.data.repository.CrudRepository;
 
 /**

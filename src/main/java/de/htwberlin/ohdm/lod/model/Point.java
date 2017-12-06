@@ -1,4 +1,4 @@
-package de.htwberlin.ohdm.lod.Models;
+package de.htwberlin.ohdm.lod.model;
 
 import com.vividsolutions.jts.geom.Geometry;
 
