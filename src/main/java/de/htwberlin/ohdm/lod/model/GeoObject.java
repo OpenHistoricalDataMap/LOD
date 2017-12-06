@@ -1,5 +1,8 @@
-package de.htwberlin.ohdm.lod.Models;
+package de.htwberlin.ohdm.lod.model;
 
+import com.fasterxml.jackson.annotation.JsonRawValue;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -8,20 +11,18 @@ import javax.persistence.Table;
  * Created by ggrauberger on 07.11.17.
  */
 @Entity
-@Table(name = "geoobject")
 public class GeoObject {
     @Id
     private Long id;
+
+    @Column(name = "name")
     private String name;
-    private Long source_user_id;
 
-    public GeoObject() {
-    }
+    @Column(name = "geometry")
+    private String geometry;
 
-    @Override
-    public String toString() {
-        return String.format("GeoObject:[id:%d, name:%s]", id, name);
-    }
+    @Column(name = "source_user_id")
+    private Long userId;
 
     public Long getId() {
         return id;
@@ -31,7 +32,12 @@ public class GeoObject {
         return name;
     }
 
-    public Long getSource_user_id() {
-        return source_user_id;
+    public Long getUserId() {
+        return userId;
+    }
+
+    @JsonRawValue
+    public String getGeometry() {
+        return geometry;
     }
 }
