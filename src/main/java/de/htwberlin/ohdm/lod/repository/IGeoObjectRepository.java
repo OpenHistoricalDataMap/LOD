@@ -3,11 +3,14 @@ package de.htwberlin.ohdm.lod.repository;
 import de.htwberlin.ohdm.lod.model.GeoObject;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 /**
  * Created by ggrauberger on 07.11.17.
  */
-public interface IGeoObjectRepository extends CrudRepository<GeoObject, Long> {
+
+public interface IGeoObjectRepository extends ReadOnlyRepository<GeoObject, Long> {
     @Query(value = "SELECT " +
             "geometry.id, " +
             "geoobject.name, " +
