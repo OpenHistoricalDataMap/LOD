@@ -1,7 +1,5 @@
 package de.htwberlin.ohdm.lod.model;
 
-import com.vividsolutions.jts.geom.Geometry;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -14,14 +12,9 @@ import javax.persistence.Table;
 public class Point {
     @Id
     private Long id;
-    private Geometry point;
     private Long source_user_id;
 
     public Point() {
-    }
-
-    public Geometry getPoint() {
-        return point;
     }
 
     public Long getId() {

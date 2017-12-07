@@ -1,6 +1,5 @@
 package de.htwberlin.ohdm.lod.model;
 
-import com.vividsolutions.jts.geom.Geometry;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,14 +14,9 @@ public class Line {
     @Id
     private Long id;
     private Long source_user_id;
-    private Geometry line;
 
     public Line() {
         super();
-    }
-
-    public Geometry getLine() {
-        return line;
     }
 
     public Long getId() {
