@@ -8,7 +8,5 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 /**
  * Created by ggrauberger on 09.11.17.
  */
-public interface IPolygonRepository extends PagingAndSortingRepository<Polygon, Long> {
-    Polygon findById(Long id);
-    Page<Polygon> findAll(Pageable pageable);
+public interface IPolygonRepository extends ReadOnlyRepository<Polygon, Long> {
 }
