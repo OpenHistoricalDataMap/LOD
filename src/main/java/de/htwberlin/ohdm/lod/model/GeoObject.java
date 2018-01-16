@@ -23,6 +23,13 @@ public class GeoObject {
 
     @Column(name = "source_user_id")
     private Long userId;
+    
+    @Column(name = "classification_id")
+    private Long classification;
+    
+    public Long getClassification(){
+    	return classification;
+    }
 
     public Long getId() {
         return id;

@@ -14,6 +14,7 @@ public interface IGeoObjectRepository extends ReadOnlyRepository<GeoObject, Long
     @Query(value = "SELECT " +
             "geometry.id, " +
             "geoobject.name, " +
+            "geometry.classification_id," +
             "st_asgeojson(" +
             "  CASE " +
             "  WHEN geometry.type_target = 1 " +
