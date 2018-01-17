@@ -2,6 +2,8 @@ package de.htwberlin.ohdm.lod.model;
 
 import com.fasterxml.jackson.annotation.JsonRawValue;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -26,6 +28,20 @@ public class GeoObject {
     
     @Column(name = "classification_id")
     private Long classification;
+    
+    @Column(name = "valid_since")
+    private Date valid_since;
+    
+    @Column (name = "valid_until")
+    private Date valid_until;
+    
+    public Date getValid_since(){
+    	return valid_since;
+    }
+    
+    public Date getValid_until(){
+    	return valid_until;
+    }
     
     public Long getClassification(){
     	return classification;

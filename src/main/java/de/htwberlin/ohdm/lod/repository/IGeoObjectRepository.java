@@ -15,6 +15,8 @@ public interface IGeoObjectRepository extends ReadOnlyRepository<GeoObject, Long
             "geometry.id, " +
             "geoobject.name, " +
             "geometry.classification_id," +
+            "geometry.valid_since," +
+            "geometry.valid_until," +
             "st_asgeojson(" +
             "  CASE " +
             "  WHEN geometry.type_target = 1 " +
