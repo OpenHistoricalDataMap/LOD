@@ -24,6 +24,12 @@ public class GeoObject {
     @Column(name = "source_user_id")
     private Long userId;
 
+    @Column(name = "valid_since")
+    private String validSince;
+
+    @Column(name = "valid_until")
+    private String validUntil;
+
     public Long getId() {
         return id;
     }
@@ -40,4 +46,8 @@ public class GeoObject {
     public String getGeometry() {
         return geometry;
     }
+
+    public String getValidSince() { return validSince; }
+
+    public String getValidUntil() { return validUntil; }
 }
