@@ -30,28 +30,22 @@ public class GeoObject {
     private Long classification;
     
     @Column(name = "valid_since")
-    private Date valid_since;
+    private Date validSince;
     
     @Column (name = "valid_until")
-    private Date valid_until;
+    private Date validUntil;
     
-    public Date getValid_since(){
-    	return valid_since;
+    public Date getValidSince(){
+    	return validSince;
     }
     
-    public Date getValid_until(){
-    	return valid_until;
+    public Date getValidUntil(){
+    	return validUntil;
     }
     
     public Long getClassification(){
     	return classification;
     }
-
-    @Column(name = "valid_since")
-    private String validSince;
-
-    @Column(name = "valid_until")
-    private String validUntil;
 
     public Long getId() {
         return id;
@@ -69,8 +63,4 @@ public class GeoObject {
     public String getGeometry() {
         return geometry;
     }
-
-    public String getValidSince() { return validSince; }
-
-    public String getValidUntil() { return validUntil; }
 }
