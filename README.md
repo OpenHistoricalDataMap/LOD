@@ -21,7 +21,7 @@ This file should contain the following.
 
 ```properties
 ##/src/main/resource/application.properties
-spring.datasource.url = the datasource URL e.g. jdbc:postgres://localhost:5432/my_database
+spring.datasource.url = the datasource URL e.g. jdbc:postgresql://localhost:5432/my_database
 spring.datasource.username = username
 spring.datasource.password = superAwesomeSecretPassword
 
