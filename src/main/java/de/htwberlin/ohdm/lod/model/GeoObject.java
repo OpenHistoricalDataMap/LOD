@@ -11,6 +11,12 @@ import javax.persistence.Table;
 
 /**
  * Created by ggrauberger on 07.11.17.
+ *
+ * This Class represents a GeoObject in another sense
+ * than it is in the database.
+ * This geobject is a complete item on a map including
+ * geometries and the actual name of the entity rather
+ * than the pure name as it is in the database.
  */
 @Entity
 public class GeoObject {
