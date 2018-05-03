@@ -1,6 +1,6 @@
 package de.htwberlin.ohdm.lod.model;
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

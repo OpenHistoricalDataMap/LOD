@@ -3,8 +3,10 @@ package de.htwberlin.ohdm.lod.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "subsequent_geom_user")
 public class SubsequentGeomUser {
     @Id
     private Long id;
